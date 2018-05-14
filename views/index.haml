@@ -1,0 +1,68 @@
+.small-container
+  %form.ui.form{ action: "/search", method: :post }
+    .field
+      %label Work Address
+      %input{ name: 'work_address' }
+    .field
+      .ui.grid
+        .ui.eight.wide.column
+          %label Work Start
+          .ui.inline.dropdown
+            %input{:name => "be_at_work_hour", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text 9
+            .menu
+              - (1..12).each do |i|
+                .item{"data-value" => i}= i
+
+          %span :
+
+          .ui.inline.dropdown
+            %input{:name => "be_at_work_minute", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text 00
+            .menu
+              - (0..11).each do |i|
+                - if i * 5 < 10
+                  .item{"data-value" => i * 5}= "0#{i * 5}"
+                - else
+                  .item{"data-value" => i * 5}= i * 5
+
+          .ui.inline.dropdown
+            %input{:name => "be_at_work_day_period", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text AM
+            .menu
+              - ["AM", "PM"].each do |i|
+                .item{"data-value" => i}= i
+
+        .ui.eight.wide.column
+          %label Work End
+          .ui.inline.dropdown
+            %input{:name => "get_off_work_hour", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text 6
+            .menu
+              - (1..12).each do |i|
+                .item{"data-value" => i}= i
+
+          %span :
+
+          .ui.inline.dropdown
+            %input{:name => "get_off_work_minute", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text 30
+            .menu
+              - (0..11).each do |i|
+                .item{"data-value" => i * 5}= i * 5
+
+          .ui.inline.dropdown
+            %input{:name => "get_off_work_day_period", :type => "hidden"}
+            %i.dropdown.icon
+            .default.text PM
+            .menu
+              - ["AM", "PM"].each do |i|
+                .item{"data-value" => i}= i
+
+    %button Submit
+

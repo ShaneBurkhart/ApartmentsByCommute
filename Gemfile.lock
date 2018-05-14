@@ -1,0 +1,45 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    airrecord (0.2.4)
+      faraday (~> 0.10)
+      net-http-persistent (~> 2.9)
+    faraday (0.15.1)
+      multipart-post (>= 1.2, < 3)
+    google-maps (2.2.0)
+      hashie (~> 2.0.5)
+      httpclient (~> 2.7.1)
+      json (>= 1.7.5)
+      ruby-hmac (~> 0.4.0)
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
+    hashie (2.0.5)
+    httpclient (2.7.2)
+    json (2.1.0)
+    multipart-post (2.0.0)
+    mustermann (1.0.2)
+    net-http-persistent (2.9.4)
+    rack (2.0.5)
+    rack-protection (2.0.1)
+      rack
+    ruby-hmac (0.4.0)
+    sinatra (2.0.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.1)
+      tilt (~> 2.0)
+    temple (0.8.0)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  airrecord
+  google-maps
+  haml
+  sinatra
+
+BUNDLED WITH
+   1.16.1

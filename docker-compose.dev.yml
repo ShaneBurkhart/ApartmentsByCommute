@@ -1,0 +1,8 @@
+version: '2.1'
+services:
+    web:
+        image: shaneburkhart/apartments_by_commute
+        ports:
+            - 3000:4567
+        volumes:
+            - .:/app

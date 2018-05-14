@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Simple Map
+    %meta{:content => "initial-scale=1.0", :name => "viewport"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "/style.css", :rel => "stylesheet", :type => "text/css"}/
+
+    %link{:href => "https://s3-us-west-2.amazonaws.com/construction-vr/libs/semantic.min.css", :rel => "stylesheet", :type => "text/css"}/
+
+    %script( src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+    %script{:src => "https://s3-us-west-2.amazonaws.com/construction-vr/libs/semantic.min.js", :type => "text/javascript"}
+
+
+  %body
+    = yield
+
+  :javascript
+    $('.ui.dropdown').dropdown();
